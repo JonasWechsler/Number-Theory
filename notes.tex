@@ -1,0 +1,77 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amstext}
+\usepackage{array}
+\newcommand{\thf}{\rule{\textwidth}{.4pt}}
+
+\title{Day one lecture}
+\author{Jonas Wechsler}
+\date{January 5, 2015}
+
+\begin{document}
+
+	\maketitle
+	\section{Proofs!}
+	\begin{tabular}{l l}
+		Definition: & $\mathbb{N}$ : {1,2,3...}\\
+		& $\mathbb{Z}$ : {... -3,-2,-1,0,1,2,3...}\\
+		\\
+		Definition: & If $a, d \in \mathbb{Z}$, then\\
+		& $d|a$ ("d divides a") if $\exists k \in \mathbb{Z}$ $\ni a = kd$\\
+		\\
+		Definition: & If $a, b, n \in \mathbb{Z}$ and $n > 0$, then \\
+		& $a \equiv b$ mod $n$ if $n|(a-b)$\\ 
+		& "a is congruent to b modulo n"
+	\end{tabular}
+	\\\vspace{1 mm}\\
+	\begin{tabular}{l l}
+		Theorem: & \[
+			\left 
+			\begin{tabular}{l}
+				$n \in \mathbb{Z}$\\
+				$6 | n$\\
+			\end{tabular}
+		\right \}
+	\] $\implies 3|n$\\ 
+\end{tabular}\\
+\vspace{1 mm}\\
+$a\equiv b mod(n) \iff \exists m|mn+b=a$\\
+\vspace{1 mm}\\
+%Homework: 1.1 - 1.14, pp 9-12
+%\section{Day 1 homework}
+%\begin{enumerate}
+%	\item[1.1]	Let $a,b,c \in \mathbb{Z}.$ If $a|b$ and $a|c$, then $a|(b+c)$
+%	\item[1.2]	Let $a,b,c \in \mathbb{Z}.$ If $a|b$ and $a|c$, then $a|(b-c)$
+%	\item[1.3]	Let $a,b,c \in \mathbb{Z}.$ If $a|b$ and $a|c$, then $a|bc$
+%\end{enumerate}\\
+%\section{Day ??? Homework}
+\begin{tabular}{l l}
+	\emph{Well ordering axiom} & In any subset of \mathbb{N} there exists a smallest element.\\
+\end{tabular}
+\begin{theorem}: & $\forall n \in \mathbb{N} \exists k \in \mathbb{N} \ni |7k-n|<7$
+\end{theorem}\begin{proof}
+Define $s={7i|i \in \mathbb{N} 7i>n}$\\
+By Well Ordering Axiom S contains a smallest element, call it $7k$(for some $k \in \mathbb{N}$).\\
+$7k-n$ must be less than 7, else\\
+$7(k-1)=7k-7>n$ and $7k$ is not the smallest element of S. $\blacksquare$
+
+\begin{definition}
+	$a,b,d \in \mathbb{Z}$\\
+	$d|a \land d|b$\\
+	$d$ is a common divisor of $a$ and $b$\\
+	If $x>d \leftrightarrow x \nmid a \lor x \nmid b$, then
+	d is the \emph{greatest common divisor}\\
+	denoted gcd(a,b)=d or simply (a,b)=d\\
+	If (a,b) = 1, then a and b are said to be \emph{relatively prime} or \emph{coprime}.\\
+	Ex (8,15)=1 8 and 15 are coprime\\
+
+\end{definition}
+\begin{tabular}{l l}
+	\emph{The Division Algoirthm} & Given any pair of natural numbers $n \land m \exists$ a unique pair of integers q (for quotient) and r (for remainder) satisying $m=nq-r$ with $0 \leq r \leq n-1$\\
+\end{tabular}
+\end{document}
+
